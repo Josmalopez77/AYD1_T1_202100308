@@ -14,6 +14,14 @@ app.post('/cancion', (req, res) => {
   res.status(201).json(nuevaCancion);
 });
 
+app.get('/informacion', (req, res) => {
+    res.json({
+      nombre: "José Manuel López Lemus",
+      carnet: "202100308"
+    });
+  });
+  
+
 app.listen(port, () => {
   console.log(`API corriendo en http://localhost:${port}`);
 });
